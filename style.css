@@ -6,3 +6,56 @@
 	box-sizing: border-box;
 	outline: none;
 }
+
+body {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+body[data-theme="dark"] {
+	background-color: #222;
+}
+
+#meteor-shower {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	z-index: -1;
+}
+
+.toggle-container {
+	position: relative;
+	width: 100px;
+	height: 50px;
+	border: 1px solid white;
+	border-radius: 50px;
+	box-shadow: 0 0 10px white;
+	overflow: hidden;
+}
+
+input {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+
+.slider {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+	width: 40px;
+	height: 40px;
+	background-color: whitesmoke;
+	border-radius: 100%;
+	box-shadow: 0 0 10px white;
+	transition: all 250ms;
+}
+
+#toggle-effect {
+	position: absolute;
+	z-index: -1;
+}

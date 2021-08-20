@@ -1,3 +1,3 @@
-# Theme Toggle
+# Theme Toggler
 
-Toggle de temas.
+Um toggler entre tema escuro e claro.

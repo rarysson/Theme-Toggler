@@ -5,12 +5,21 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Theme toggle</title>
+	<title>Theme toggler</title>
 	<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-theme="dark">
+	<label class="toggle-container">
+		<input type="checkbox">
+		<div class="slider"></div>
+		<canvas id="toggle-effect" width="100" height="50"></canvas>
+	</label>
+	<canvas id="meteor-shower" width="1920" height="1080"></canvas>
 
+	<script src="./utils.js"></script>
+	<script src="./background.js"></script>
+	<script src="./toggleEffect.js"></script>
 </body>
 
 </html>

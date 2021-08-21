@@ -12,10 +12,15 @@ body {
 	height: 100vh;
 	display: grid;
 	place-items: center;
+	transition: background-color 250ms;
 }
 
 body[data-theme="dark"] {
 	background-color: #222;
+}
+
+body[data-theme="white"] {
+	background-color: whitesmoke;
 }
 
 #meteor-shower {
@@ -33,6 +38,13 @@ body[data-theme="dark"] {
 	border-radius: 50px;
 	box-shadow: 0 0 10px white;
 	overflow: hidden;
+	transition: all 250ms;
+}
+
+body[data-theme="white"] .toggle-container {
+	border-color: palevioletred;
+	box-shadow: 0 0 10px palevioletred;
+	background-color: pink;
 }
 
 input {
@@ -45,11 +57,12 @@ input {
 	cursor: pointer;
 	position: absolute;
 	top: 50%;
-	left: 5px;
-	transform: translateY(-50%);
+	left: 0;
+	transform: translateX(5px) translateY(-50%);
 	width: 40px;
 	height: 40px;
 	background-color: whitesmoke;
+	border: 1px solid transparent;
 	border-radius: 100%;
 	box-shadow: 0 0 10px white;
 	transition: all 250ms;
@@ -57,5 +70,11 @@ input {
 
 #toggle-effect {
 	position: absolute;
-	z-index: -1;
+	pointer-events: none;
+}
+
+input:checked + .slider {
+	transform: translateX(130%) translateY(-50%);
+	background-color: yellow;
+	box-shadow: 0 0 10px 3px yellow;
 }
